@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Roll ID</th>
       <th>Start</th>
       <th>End</th>
       <th>Stock</th>
@@ -15,22 +16,35 @@
       <th>Dev</th>
       <th>Scan</th>
       <th>Notes</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @rolls.each do |roll| %>
       <tr>
+        <td><%= roll.id %></td>
         <td><%= roll.start %></td>
         <td><%= roll.end %></td>
         <td><%= roll.stock %></td>
         <td><%= roll.format %></td>
         <td><%= roll.iso %></td>
         <td><%= roll.push %></td>
-        <td><%= roll.current %></td>
-        <td><%= roll.dev %></td>
-        <td><%= roll.scan %></td>
+        <% if roll.current %>
+          <td style="background-color:green"></td>
+        <% else %>
+          <td style="background-color:red"></td>
+        <% end %>
+        <% if roll.dev %>
+          <td style="background-color:green"></td>
+        <% else %>
+          <td stlye="background-color:red"></td>
+        <% end %>
+        <% if roll.scan %>
+          <td style="background-color:green"></td>
+        <% else %>
+          <td style="background-color:red"></td>
+        <% end %>
         <td><%= roll.notes %></td>
         <td><%= link_to 'Show', roll %></td>
         <td><%= link_to 'Edit', edit_roll_path(roll) %></td>
@@ -42,4 +56,4 @@
 
 <br>
 
-<%= link_to 'New Roll', new_roll_path %>
+<%= link_to 'New Roll', new_roll_path, class:"submit-button" %>
