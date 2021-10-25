@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @roll.start %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @roll.end %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @roll.stock %>
+</p>
+
+<p>
+  <strong>Format:</strong>
+  <%= @roll.format %>
+</p>
+
+<p>
+  <strong>Iso:</strong>
+  <%= @roll.iso %>
+</p>
+
+<p>
+  <strong>Push:</strong>
+  <%= @roll.push %>
+</p>
+
+<p>
+  <strong>Current:</strong>
+  <%= @roll.current %>
+</p>
+
+<p>
+  <strong>Dev:</strong>
+  <%= @roll.dev %>
+</p>
+
+<p>
+  <strong>Scan:</strong>
+  <%= @roll.scan %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @roll.notes %>
+</p>
+
+<%= link_to 'Edit', edit_roll_path(@roll) %> |
+<%= link_to 'Back', rolls_path %>

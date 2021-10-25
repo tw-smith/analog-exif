@@ -1,0 +1,67 @@
+<%= form_with(model: roll) do |form| %>
+  <% if roll.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(roll.errors.count, "error") %> prohibited this roll from being saved:</h2>
+
+      <ul>
+        <% roll.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :start %>
+    <%= form.date_select :start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end %>
+    <%= form.date_select :end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock %>
+    <%= form.text_field :stock %>
+  </div>
+
+  <div class="field">
+    <%= form.label :format %>
+    <%= form.text_field :format %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iso %>
+    <%= form.text_field :iso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :push %>
+    <%= form.text_field :push %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current %>
+    <%= form.check_box :current %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dev %>
+    <%= form.check_box :dev %>
+  </div>
+
+  <div class="field">
+    <%= form.label :scan %>
+    <%= form.check_box :scan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rolls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start</th>
+      <th>End</th>
+      <th>Stock</th>
+      <th>Format</th>
+      <th>Iso</th>
+      <th>Push</th>
+      <th>Current</th>
+      <th>Dev</th>
+      <th>Scan</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rolls.each do |roll| %>
+      <tr>
+        <td><%= roll.start %></td>
+        <td><%= roll.end %></td>
+        <td><%= roll.stock %></td>
+        <td><%= roll.format %></td>
+        <td><%= roll.iso %></td>
+        <td><%= roll.push %></td>
+        <td><%= roll.current %></td>
+        <td><%= roll.dev %></td>
+        <td><%= roll.scan %></td>
+        <td><%= roll.notes %></td>
+        <td><%= link_to 'Show', roll %></td>
+        <td><%= link_to 'Edit', edit_roll_path(roll) %></td>
+        <td><%= link_to 'Destroy', roll, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roll', new_roll_path %>
