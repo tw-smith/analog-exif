@@ -4,6 +4,8 @@ class PhotosController < ApplicationController
   # GET /photos or /photos.json
   def index
     @photos = Photo.all
+    @photos = @photos.sort_by {|photo| photo.roll_id}
+
     # This shows only photos from roll2 but is hardcoded. Need to work out how
     # to pass the id of the current Roll to photos_controller to make it dynamic
     #@photos = Photo.where(roll_id: 2)
