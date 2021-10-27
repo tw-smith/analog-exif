@@ -2,7 +2,6 @@
 ===============
 ISSUES / TO ADD
 ===============
-Dev boolean colour coding doesn't appear to work
 Filter by dynamic current roll id (can only hard code right now)
 Tests!
 Centre new roll/new photo buttons
