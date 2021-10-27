@@ -16,15 +16,17 @@
 
 table, td, th {
   border: 2px solid black;
+  text-align: center;
 }
 
 table{
   margin-left: auto;
   margin-right: auto;
+  border-radius: 7px;
 }
 
 th {
-  background-color: #CCE6FF;
+  background-color: #2C89E0;
 }
 
 h1 {
@@ -32,8 +34,22 @@ h1 {
 }
 
 .submit-button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5%;
+  text-align: center;
   padding: 3px;
   border: 1px solid black;
   border-radius: 5px;
   background-color: #CCE6FF;
+}
+
+.field {
+  text-align: center;
+}
+
+.actions {
+  margin: auto;
+  text-decoration: line-through;
 }

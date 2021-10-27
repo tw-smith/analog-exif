@@ -17,7 +17,11 @@
 
   <tbody>
     <% @photos.each do |photo| %>
+      <% if (photo.roll_id%2 == 0) %>
+        <tr style="background-color:#CCE6FF">
+      <% else %>
       <tr>
+      <% end %>
         <td><%= photo.id %></td>
         <td><%= photo.roll_id %></td>
         <td><%= photo.shutter %></td>
@@ -34,5 +38,6 @@
 
 <br>
 
-<%= link_to 'New Photo', new_photo_path %>
-<%= link_to 'Back', rolls_path %>
+<%= link_to 'New Photo', new_photo_path, class:"submit-button" %>
+<br>
+<%= link_to 'Back', rolls_path, class:"submit-button" %>
