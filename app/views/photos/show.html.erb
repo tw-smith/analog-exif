@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Shutter:</strong>
+  <%= @photo.shutter %>
+</p>
+
+<p>
+  <strong>Aperture:</strong>
+  <%= @photo.aperture %>
+</p>
+
+<p>
+  <strong>Iso:</strong>
+  <%= @photo.iso %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @photo.notes %>
+</p>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

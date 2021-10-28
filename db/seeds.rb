@@ -6,5 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Seed database with some dummy photos and rolls for development purposes
 roll1 = Roll.create(stock: "Ektar",iso: "400", current: "false")
 roll2 = Roll.create(stock: "Portra",iso: "800", current: "true")
+photo1 = Photo.create(aperture:"5.6",shutter:"500",notes:"test1",roll_id: 1)
+photo2 = Photo.create(aperture:"9",shutter:"500",notes:"test1",roll_id: 1)
+photo3 = Photo.create(aperture:"15",shutter:"500",notes:"test1",roll_id: 2)
+photo4 = Photo.create(aperture:"2.5",shutter:"500",notes:"test1",roll_id: 2)
+photo5 = Photo.create(aperture:"22",shutter:"500",notes:"test1",roll_id: 2)
