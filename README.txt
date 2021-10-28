@@ -1,19 +1,32 @@
 # README
 ===============
+SETUP
+===============
+
+Created in Rails 6.1.4.1
+
+1) extract .zip
+2) Navigate to directory in CLI
+3) Run "bundle exec rails webpacker:install"
+4) Create database with "rails db:schema:load"
+5) Seed database with sample data with "rails db:seed"
+6) Start local server with "rails s"
+7) Navigate to "localhost:3000/rolls" in your browser
+
+
+===============
 ISSUES / TO ADD
 ===============
-Filter by dynamic current roll id (can only hard code right now)
+Write readme in markdown
+Filter photos by dynamic current roll_id (can only hard code right now)
 Tests!
-Centre new roll/new photo buttons
 Add home button
+Autopopulate roll number field on new photo form
 Mobile friendly
-Column widths
 
 Long term:
 Connect to desktop side EXIF rewriter
 Styling
-
-
 
 ============
 INTRODUCTION
@@ -49,26 +62,7 @@ bring up a form with the following fields:
   -- Scan: Tick box if the film has been scanned
   -- Notes: Any freeform notes
 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  After filling in the form, click Submit and the roll will be saved to the database.
+  It is now possible to add individual photos by clicking "Edit" next to the relevant
+  roll and then clicking "New Photo". Once again, fill in the short form and click
+  "Submit"
